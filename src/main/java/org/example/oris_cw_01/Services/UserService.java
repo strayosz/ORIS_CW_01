@@ -101,7 +101,7 @@ public class UserService {
             setUser(user, login, name, surname, role, status, biography);
             try {
                 userRepository.addUser(user);
-                request.getRequestDispatcher("/home.ftl").forward(request, response);
+                request.getRequestDispatcher("/show").forward(request, response);
             } catch (Exception ex) {
                 throw new RuntimeException(ex);
             }

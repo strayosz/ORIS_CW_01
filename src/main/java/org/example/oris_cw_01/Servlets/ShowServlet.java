@@ -18,4 +18,9 @@ public class ShowServlet extends HttpServlet {
         userService.getAll(request);
         request.getRequestDispatcher("/show.ftl").forward(request, response);
     }
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        userService.getAll(request);
+        request.getRequestDispatcher("/show.ftl").forward(request, response);
+    }
 }
